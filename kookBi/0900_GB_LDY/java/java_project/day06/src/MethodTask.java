@@ -8,20 +8,21 @@ public class MethodTask {
     2. 데이터 삭제하기
     3. 데이터 목록보기
      */
-    static String[] deleteData(int target, String[] data, int currLen){
+    // 데이터 삭제
+    static String[] deleteData(int target, String[] datas, int currLen){
         String[] dData = new String[currLen];
         int index = 0;
-        for (int i = 0; i < data.length; i++) {
+        for (int i = 0; i < datas.length; i++) {
             if(i==target-1){ // n번째 이니 -1 을 해준다
                 continue;
             }
-            dData[index] = data[i];
+            dData[index] = datas[i];
             index++;
         }
-        System.out.println(target+"번째 데이터 "+data[target-1]+"이 삭제되었습니다.\n");
+        System.out.println(target+"번째 데이터 "+datas[target-1]+"이 삭제되었습니다.\n");
         return dData;
     }
-
+    // 데이터 추가
     static String[] addData(String dummy, String[] datas, int currLen){
         String[] dData = new String[currLen];
         for (int i = 0; i < datas.length; i++) {
@@ -30,7 +31,7 @@ public class MethodTask {
         dData[currLen-1] = dummy; // 마지막 인덱스에 입력값을 추가해준다
         return dData;
     }
-
+    // 데이터 목록 출력
     static void printData(String[] datas){ // 데이터 출력
         for (int i = 0; i < datas.length; i++) {
             System.out.printf("%03d 번째 데이터 : %s\n", i+1, datas[i]);
@@ -73,7 +74,7 @@ public class MethodTask {
                 case 2:
                     currLen--; // 리스트의 길이 감소
                     int target =0;
-                    while(true){
+                    while(true){ // 다른 값이 들어올 수 없도록
                         System.out.println("몇번째 데이터를 삭제하시겠습니까? : ");
                         target = sc.nextInt();
                         if (target<=currLen+1) break; // 타겟이 현재 길이보다 작다면 break
