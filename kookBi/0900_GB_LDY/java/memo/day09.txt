@@ -1,0 +1,79 @@
+st.koreaedugroup.com
+	만족도 조사
+
+업 캐스팅(Up casting)
+	자식 타입의 객체를 부모 타입으로 변환
+	부모 타입의 객체에 자식 클래스의 필드를 담아주는 것
+	ex)
+		SuperCar supercar = new SuperCar();
+		Car car = supercar;
+
+	부모 타입의 객체에 자식 생성자를 호출
+	ex)
+		Car car = new SuperCar();
+
+	부모 타입의 매개변수에 자식 객체를 넘기는 것
+	ex)
+		void f(Car car){
+
+		}
+
+		f(new SuperCar());
+
+	업 캐스팅 된 객체는 자식 클래스에서 추가한 내용을 사용할 수 없다.
+	단, 오버라이딩 된 메소드는 사용 가능하다.
+
+다운 캐스팅(Down casting)
+	업 캐스팅 된 객체를 다시 자식타입으로 바꾸는 것
+	업 캐스팅 시 잘려나갔던 자식클래스의 추가된 내용을 다시 달아주는 것
+
+	(자식클래스)업캐스팅된객체
+
+instanceof
+	객체 instanceof 클래스명 : 객체가 뒤에오는 클래스 타입인지 비교
+			true / false 두가지 결과로 나오는 조건식
+
+	부모객체 instanceof 부모클래스	: true
+	부모객체 instanceof 자식클래스	: false
+	자식객체 instanceof 부모클래스	: true
+	자식객체 instanceof 자식클래스	: true
+	업캐스팅객체 instanceof 부모클래스	: true
+	업캐스팅객체 instanceof 자식클래스	: true
+
+BMS
+	1. 계좌개설 - 계좌번호는 랜덤한 5자리숫자로 통일
+		1. 국민은행
+		2. 신한은행
+		3. 우리은행
+
+		이름 : 
+		비밀번호 : 
+
+		김사과님 계좌개설이 완료되었습니다.(계좌번호 : 30124)
+	2. 로그인
+		계좌번호 : 
+		비밀번호 : 
+
+		김사과님 환영합니다~
+			메인화면 띄우기
+			1. 입금하기
+			2. 출금하기
+			3. 잔액조회
+			4. 로그아웃
+	3. 나가기
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
