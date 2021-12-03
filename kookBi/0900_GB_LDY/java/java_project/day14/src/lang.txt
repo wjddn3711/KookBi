@@ -1,0 +1,6 @@
+HTML
+Javascript
+C#
+DBMS
+JSP
+Python
